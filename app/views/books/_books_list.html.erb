@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Subcategory</th>
+    <th>Title</th>
+    <th>Link</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.category %></td>
+      <td><%= book.subcat%></td>
+      <td><%= book.title%></td>
+      <td><%= book.link%></td>
+      <td><%= book.description%></td>
+    </tr>
+  <% end %>
+</table>
