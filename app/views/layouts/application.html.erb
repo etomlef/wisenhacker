@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CodeApp</title>
+  <title>Wisenhacker</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 </head>
 <body>
 
+<div class="container_12">  
+
+<div class="grid_12 logo">
+  <%= image_tag "logo.png" %>
+</div>
+
+<!-- for devise authentication -->
+  <%if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <%if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
+<div class="grid_8 placeholder1">placeholder</div>
+
+<div class="grid_4 omega login">
+  <% if user_signed_in? %>
+    Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</div>
+
 <%= yield %>
+
+</div> 
 
 </body>
 </html>
