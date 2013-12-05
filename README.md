@@ -1,6 +1,6 @@
 ## Final Project Proposal
 
-### Code Books
+### Wisenhacker
 
 #### Background:
 
@@ -10,7 +10,7 @@ Recently, an old Stackoverflow project of free programming resources was adopted
 
 #### Initial Functionality
 
-1. Login
+1. Login (maybe with Github?)
 2. Check off what you want to learn
 3. List of Resources is generated for you.
 4. Check them off as you complete them.
