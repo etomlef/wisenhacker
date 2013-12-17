@@ -19,6 +19,12 @@ h1 {
   margin-right: auto;
 }
 
+.about {
+  text-align: center;
+  font-size: 0.7em;
+  border: 1px dashed #333;
+}
+
 .logo {
   text-align: center;
   padding-bottom: 5px;
@@ -36,15 +42,14 @@ h1 {
   color: #333333;
 }
 
-.placeholder1 {
-  text-align: left;
-  border: 1px dashed #333;
-}
-
 .footer {
   text-align: center;
   border: 1px dashed #333;
   background-color: red;
   font-size: .60em;
   color: #ffffff;
+}
+
+.container_12 {
+  border: 1px dashed #333;
 }
