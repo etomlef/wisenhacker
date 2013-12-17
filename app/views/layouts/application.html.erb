@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Wisenhacker</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-</head>
-<body>
+  <head>
+    <title>Wisenhacker</title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+      <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  </head>
+  
+  <body>
+    <div id="wrap">
+      
+      <div id="main" class="container_12 center">
+          
+        <!-- About Link -->        
+        <div class="grid_3 omega about_link">
+          <a href="/about">
+            <br>ABOUT
+          </a>
+        </div>
+        
+        <!-- Logo -->
+        <div class="grid_6 logo">
+          <a href="#"><%= image_tag "logo.png" %></a>
+        </div>
 
-<div class="container_12 center">
+        <!-- Sign In Links -->        
+        <div class="grid_3 omega alpha omega login">
+          <% if user_signed_in? %>
+            <br>Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <br>
+            <div class="grid_1">
+              <%= link_to "SIGN UP", new_user_registration_path %>
+            </div>
+            <div class="grid_1">
+                <%= link_to "LOG IN", new_user_session_path %>
+            </div>
+          <% end %>
+        </div>
 
-<div class="grid_3 omega about"><br>ABOUT</div>
+        <!-- For devise authentication -->
+          <%if notice %>
+            <p class="notice"><%= notice %></p>
+          <% end %>
+          <%if alert %>
+            <p class="alert"><%= alert %></p>
+          <% end %>
 
-<div class="grid_6 logo">
-  <%= image_tag "logo.png" %>
-</div>
+        <%= yield %>
+      </div>
+    </div>
+        
+        <!-- Footer -->      
+        <div id="stickyfoot" class="footer">
+          © <%= Time.now.year %> WISENHACKER
+        </div>
 
-<div class="grid_3 omega alpha omega login">
-  <% if user_signed_in? %>
-    <br>Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <br>
-    <div class="grid_1"><%= link_to "SIGN UP", new_user_registration_path %></div><div class="grid_1"><%= link_to "LOG IN", new_user_session_path %></div>
-  <% end %>
-</div>
-
-<!-- for devise authentication -->
-  <%if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
-  <%if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
-
-<%= yield %>
-
-<div class="grid_12 footer">
-  © <%= Time.now.year %> WISENHACKER
-</div>
-
-</div> 
-
-</body>
-<script type="text/javascript">
-  google.load("feeds", "1");
-</script>
+  </body>
 </html>
