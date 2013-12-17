@@ -1,0 +1,50 @@
+@font-face {
+font-family: Cabin;
+src: url('Cabin-Bold.otf'),
+     url('Cabin-Bold.eot'); /* IE9 */
+}
+
+body {
+  font-family: Cabin;
+  color: #333333;
+}
+
+h1 {
+  font-size: 2.0em;
+  letter-spacing: 0.1em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 5px;
+  border: 1px dashed #333;
+}
+
+.login {
+  text-align: center;
+  font-size: 0.7em;
+  border: 1px dashed #333;
+}
+
+.login a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.placeholder1 {
+  text-align: left;
+  border: 1px dashed #333;
+}
+
+.footer {
+  text-align: center;
+  border: 1px dashed #333;
+  background-color: red;
+  font-size: .60em;
+  color: #ffffff;
+}

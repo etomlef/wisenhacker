@@ -1,0 +1,87 @@
+.big_pic {
+  background-image: url('big_pic.gif');
+  background-size: cover;
+  height: 300px;
+}
+
+.button1 {
+  padding-top: 150px;
+  font-size: 1.10em;
+  font-weight: bold;
+  line-height: 180%;
+  letter-spacing: 0.1em;
+  color: #333333;
+}
+
+.button1 span {
+  padding: 7px;
+  background: #ffffff;
+  white-space: pre;
+}
+
+.button2 {
+  margin-top: 8px;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.button2 span {
+  padding: 12px;
+  background: #ff003b;
+}
+
+.button3 {
+  padding-top: 150px;
+}
+
+.red_button {
+  padding: 10px;
+  width: 250px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Cabin";
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  border: 8px solid rgba(1,1,1,.1);
+  -moz-border-radius: 33px;
+  -webkit-border-radius: 33px;
+  border-radius: 33px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: #ffffff;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5MDMzOCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+  background-image: -moz-linear-gradient(bottom, #e90338 0%, #f00 100%); /* gradient overlay */
+  background-image: -o-linear-gradient(bottom, #e90338 0%, #f00 100%); /* gradient overlay */
+  background-image: -webkit-linear-gradient(bottom, #e90338 0%, #f00 100%); /* gradient overlay */
+  background-image: linear-gradient(bottom, #e90338 0%, #f00 100%); /* gradient overlay */
+}
+
+.status_bar {
+  background: white;
+  border: 1px dashed #333;
+}
+
+.status_bar a {
+  text-decoration: none;
+  color: #333333;
+  letter-spacing: 0.1em;
+}
+
+.info_boxes_area {
+  background: #e3dfdf;
+  border: 1px dashed #333;
+}
+
+.box_container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 30px;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  background-color: #fff; /* layer fill content */
+  -moz-box-shadow: 0 1px 2px rgba(33,30,31,.3); /* drop shadow */
+  -webkit-box-shadow: 0 1px 2px rgba(33,30,31,.3); /* drop shadow */
+  box-shadow: 0 1px 2px rgba(33,30,31,.3); /* drop shadow */
+}
