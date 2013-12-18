@@ -12,35 +12,47 @@
   <body>
     <div id="wrap">
       
-      <div id="main" class="container_12 center">
-          
-        <!-- About Link -->        
-        <div class="grid_3 omega about_link">
-          <a href="/about">
-            <br>ABOUT
-          </a>
-        </div>
+      <div class="container_12">
+      
+      <div class="container nav">
         
-        <!-- Logo -->
-        <div class="grid_6 logo">
-          <a href="#"><%= image_tag "logo.png" %></a>
-        </div>
+        
+          <!-- About Link -->        
+          <div class="grid_3 omega about_link">
+            <a href="/about">
+              <br>ABOUT
+            </a>
+          </div>
+        
+          <!-- Logo -->
+          <div class="grid_6 logo">
+            <a href="/"><%= image_tag "logo.png" %></a>
+          </div>
 
-        <!-- Sign In Links -->        
-        <div class="grid_3 omega alpha omega login">
-          <% if user_signed_in? %>
-            <br>Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          <% else %>
-          <br>
-            <div class="grid_1">
-              <%= link_to "SIGN UP", new_user_registration_path %>
-            </div>
-            <div class="grid_1">
+          <!-- Sign In Links -->        
+          <div class="grid_3 alpha login">
+            <% if user_signed_in? %>
+              <br>Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            <% else %>
+            <br>
+              <div class="grid_1">
+                <%= link_to "SIGN UP", new_user_registration_path %>
+              </div>
+              <div class="grid_1">
                 <%= link_to "LOG IN", new_user_session_path %>
-            </div>
-          <% end %>
-        </div>
-
+              </div>
+            <% end %>
+          </div>
+          
+          <!-- Red Bar -->
+          <div class="grid_12 red_bar"><p></p></div>
+      </div>
+        
+      
+      </div>
+      
+      <div class="container_12 main">
+        
         <!-- For devise authentication -->
           <%if notice %>
             <p class="notice"><%= notice %></p>
@@ -50,11 +62,15 @@
           <% end %>
 
         <%= yield %>
+      
       </div>
+    
     </div>
+  
+  </div>
         
         <!-- Footer -->      
-        <div id="stickyfoot" class="footer">
+        <div id="stickyfoot" class="red_bar">
           © <%= Time.now.year %> WISENHACKER
         </div>
 
