@@ -6,8 +6,7 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-def welcome
-end
-
+  def welcome
+  end
 
 end

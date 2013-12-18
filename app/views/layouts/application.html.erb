@@ -30,9 +30,15 @@
           </div>
 
           <!-- Sign In Links -->        
-          <div class="grid_3 alpha login">
+          <div class="grid_4 alpha login">
             <% if user_signed_in? %>
-              <br>Welcome, <%= current_user.email %>! <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              <br>
+                <div class="grid_2 alpha">
+                  <%= current_user.email.upcase %>
+                </div>
+                <div class="grid_1">
+                  <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+                </div>
             <% else %>
             <br>
               <div class="grid_1">
@@ -54,12 +60,17 @@
       <div class="container_12 main">
         
         <!-- For devise authentication -->
+        <div class="grid_12">
+        <div class="grid_5"><p></p></div>
+        <div class="grid_4">
           <%if notice %>
-            <p class="notice"><%= notice %></p>
+              <p class="notice"><%= notice %></p>
           <% end %>
           <%if alert %>
             <p class="alert"><%= alert %></p>
           <% end %>
+        </div>
+      </div>
 
         <%= yield %>
       

@@ -4,6 +4,17 @@ CodeApp::Application.routes.draw do
   root "books#welcome"
   get "search", to: "search#index"
   get "about", to: "books#about"
+  get "books", to: "books#index"
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
