@@ -38,6 +38,7 @@ gem 'less-rails' # Sprockets (what Rails 3.1 uses for its asset pipeline) suppor
 gem "bootstrap-sass-rails", "~> 2.2.2.0"
 gem 'rest-client'
 gem 'guardian-content'
+gem "twitter-bootstrap-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
