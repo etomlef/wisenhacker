@@ -5,8 +5,6 @@ class CreateBooks < ActiveRecord::Migration
       t.string :subcat
       t.string :title
       t.string :link
-      t.text :description
-
       t.timestamps
     end
   end
