@@ -34,7 +34,7 @@
             <% if user_signed_in? %>
               <br>
                 <div class="grid_2 alpha">
-                  <%= current_user.email.upcase %>
+                  <a href="/profile"><%= current_user.email.upcase %></a>
                 </div>
                 <div class="grid_1">
                   <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
