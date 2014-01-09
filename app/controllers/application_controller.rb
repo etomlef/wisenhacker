@@ -6,11 +6,11 @@ class ApplicationController < ActionController::Base
 
   # Devise Redirects
   def after_sign_up_path_for(resource)
-    '/books'
+    "/books"
   end
 
   def after_sign_in_path_for(resource)
-    "/books"
+    "/profile"
   end
 
 end
