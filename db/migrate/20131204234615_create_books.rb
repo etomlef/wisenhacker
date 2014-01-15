@@ -5,6 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :subcat
       t.string :title
       t.string :link
+      t.integer :book_id
       t.timestamps
     end
   end

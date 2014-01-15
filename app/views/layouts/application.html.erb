@@ -10,30 +10,32 @@
   </head>
   
   <body>
+
     <div id="wrap">
       
       <div class="container_12">
-      
-      <div class="container nav">
         
-        
-          <!-- About Link -->        
-          <div class="grid_3 omega about_link">
+        <div class="nav grid_12">
+
+          <!-- About Link -->    
+          <div class="grid_2"><p></p></div>    
+          <div class="grid_2 about_link">
             <a href="/about">
               <br>ABOUT
             </a>
           </div>
         
           <!-- Logo -->
-          <div class="grid_6 logo">
-            <a href="/"><%= image_tag "logo.png" %></a>
+          <div class="grid_4 logo">
+            <a href="/">   <%= image_tag "logo.png" %></a>
           </div>
-
+          
+          <div class="grid_2"><p></p></div>
           <!-- Sign In Links -->        
-          <div class="grid_4 alpha login">
+          <div class="login">
             <% if user_signed_in? %>
               <br>
-                <div class="grid_2 alpha">
+                <div class="grid_2">
                   <a href="/profile"><%= current_user.email.upcase %></a>
                 </div>
                 <div class="grid_1">
@@ -49,18 +51,14 @@
               </div>
             <% end %>
           </div>
-          
-          <!-- Red Bar -->
-          <div class="grid_12 red_bar"><p></p></div>
+
       </div>
-        
+  
       
-      </div>
-      
-      <div class="container_12 main">
+      <div class="main">
         
         <!-- For devise authentication -->
-        <div class="grid_12">
+        
         <div class="grid_5"><p></p></div>
         <div class="grid_4">
           <%if notice %>
@@ -72,9 +70,9 @@
         </div>
       </div>
 
+
         <%= yield %>
       
-      </div>
     
     </div>
   
@@ -82,7 +80,7 @@
         
         <!-- Footer -->      
         <div id="stickyfoot" class="red_bar">
-          © <%= Time.now.year %> WISENHACKER
+          <Center>© <%= Time.now.year %> WISENHACKER  ~  Made with ♥ in CT</center>
         </div>
 
   </body>
