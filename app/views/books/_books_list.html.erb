@@ -11,7 +11,7 @@
       <td><%= book.category %></td>
       <td><%= book.subcat%></td>
       <td><%= book.title%></td>
-      <td><%= book.link%></td>
+      <td><%= link_to book.link, book.link %></td>
     </tr>
   <% end %>
 </table>

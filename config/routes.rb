@@ -8,6 +8,7 @@ CodeApp::Application.routes.draw do
   get "search", to: "search#index"
   get "about", to: "books#about"
   get "books", to: "books#index"
+  post "save_book", to: "book_list#save_book"
 
 
 

@@ -1,3 +1,9 @@
 User Profile for <%= current_user.email %>
 
-<%= link_to "Edit your Account Information", edit_user_registration_path %>
+<br><%= link_to "Edit your Account Information", edit_user_registration_path %>
+
+<br>
+<%= form_for @saved_book, :url => "book_list/save_books" do |f| %>
+  <%= f.hidden_field :book_id, :value => @book_id %>
+  <%= f.submit "Learn this topic!" %>
+<% end %>
